@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Lista from "./comnponentes/lista.jsx"
+import Estrutura from "./comnponentes/estruturaDoSite.jsx"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Lista />
+    <Estrutura />
   </React.StrictMode>,
   document.getElementById('root')
 );

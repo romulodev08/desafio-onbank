@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "pokemon";
+    src: url("../fontes/Pokemon\ Hollow.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    background-color: #3761a8;
+    border-bottom: solid 1px black;
+}
+header h1 {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 30px;
+    padding: 0 10px 5px 10px;
+    margin: auto;
+    font: normal 28px "pokemon";
+    font-weight: 900;
+    line-height: 63px;
+    text-align: center;
+    border: solid 1px black;
+    color: #3761a8;
+    background-color: #feca1b;
+}
