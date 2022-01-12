@@ -16,7 +16,7 @@ export default class Lista extends Component {
             })
     }
     render() {
-        console.log(this.state.response)
+        //console.log(this.state.response)
         return (
             <div>
                 {this.state.response.map(item => <ul key={item.name} >
