@@ -22,7 +22,7 @@ export default class Lista extends Component {
                 })
             })
             this.setState({dadosDosPokemons: dados})
-            console.log(this.state.dadosDosPokemons)
+            //console.log(this.state.dadosDosPokemons)
         })
     }
     render() {
