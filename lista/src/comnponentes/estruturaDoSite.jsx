@@ -7,7 +7,6 @@ export default function Estrutura(props) {
         <div>
             <Cabeçalho />
             <Lista />
-            <PokemonInfo />
         </div>
     )
 }

@@ -1,12 +1,14 @@
 import { Component } from "react/cjs/react.development";
 import axios from "axios";
+import PokemonInfo from "./informaçãoDoPokemon";
 
 export default class Lista extends Component {
     constructor(props) {
         super(props)
         this.state = {
             response: [],
-            dadosDosPokemons: ['']
+            chave: null,
+            infoPokemon: []
         }
     }
     componentDidMount() {
@@ -21,20 +23,17 @@ export default class Lista extends Component {
                     dados[index] = res.data
                 })
             })
-            this.setState({dadosDosPokemons: dados})
-            //console.log(this.state.dadosDosPokemons)
+            this.setState({ infoPokemon: dados })
+            console.log(this.state.infoPokemon)     
         })
     }
     render() {
-        //console.log(this.state.response)
-        //console.log(this.state.dadosDosPokemons)
         return (
             <div>
+                <PokemonInfo chave={this.state.chave} dados={this.state.infoPokemon} />
                 {
-                    this.state.response.map((item, index) => <ul key={index} >
-                        <li>{item.name}</li>
-                        <li><a target="_blank" href={item.url}>{item.url}</a></li>
-                    </ul>)
+                    this.state.response.map((item, index) => 
+                    <div key={index} onClick={() => this.setState({ chave: index })} >{item.name}</div>)
                 }
             </div >
         )
