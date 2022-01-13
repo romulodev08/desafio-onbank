@@ -17,7 +17,7 @@ header h1 {
     border-radius: 30px;
     padding: 0 10px 5px 10px;
     margin: auto;
-    font: normal 28px sans-serif;
+    font: normal 28px "pokemon", sans-serif;
     font-weight: 900;
     line-height: 63px;
     text-align: center;
