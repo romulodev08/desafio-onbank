@@ -74,7 +74,7 @@ export default class PokemonInfo extends Component {
                 //console.log(this.state.duendes)
             })
         }
-        
+
     }
     render() {
         return (
@@ -152,34 +152,39 @@ export default class PokemonInfo extends Component {
                     <summary>
                         <h3>Duendes:</h3>
                     </summary>
-                    <div>
-                        {this.state.duendes.front_default != null && this.state.duendes.back_default != null ? <p>Padrão:</p> : ""}
+
+                    {this.state.duendes.front_default != null && this.state.duendes.back_default != null ? <div>
+                        <p>Padrão:</p>
                         <div>
                             <img src={this.state.duendes.front_default} alt="" />
                             <img src={this.state.duendes.back_default} alt="" />
                         </div>
-                    </div>
-                    <div>
-                        {this.state.duendes.front_female != null && this.state.duendes.back_female != null ? <p>Fêmea:</p> : ""}
+                    </div> : ""}
+                    
+                    {this.state.duendes.front_female != null && this.state.duendes.back_female != null ? <div>
+                        <p>Fêmea:</p>
                         <div>
                             <img src={this.state.duendes.front_female} alt="" />
                             <img src={this.state.duendes.back_female} alt="" />
                         </div>
-                    </div>
-                    <div>
-                        {this.state.duendes.front_shiny != null && this.state.duendes.back_shiny != null ? <p>Brilhante:</p> : ""}
+                    </div> : ""}
+
+                    {this.state.duendes.front_shiny != null && this.state.duendes.back_shiny != null ? <div>
+                        <p>Brilhante:</p>
                         <div>
                             <img src={this.state.duendes.front_shiny} alt="" />
                             <img src={this.state.duendes.back_shiny} alt="" />
                         </div>
-                    </div>
-                    <div>
-                        {this.state.duendes.front_shiny_female != null && this.state.duendes.back_shiny_female != null ? <p>Fêmea brilhante:</p> : ""}
+                    </div> : ""}
+                    
+                    {this.state.duendes.front_shiny_female != null && this.state.duendes.back_shiny_female != null ? <div>
+                        <p>Fêmea brilhante:</p>
                         <div>
                             <img src={this.state.duendes.front_shiny_female} alt="" />
                             <img src={this.state.duendes.back_shiny_female} alt="" />
                         </div>
-                    </div>
+                    </div> : ""}
+                    
                 </details>
             </section>
         )
