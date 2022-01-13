@@ -8,6 +8,12 @@ export default class PokemonInfo extends Component {
         this.state = {
             chave: null,
             nome: '',
+            habilidades: [],
+            experienciaBase: null,
+            indicesDeJogos: [],
+            altura: null,
+            peso: null,
+            
         }
     }
     componentDidUpdate() {
@@ -16,23 +22,50 @@ export default class PokemonInfo extends Component {
             this.setState({
                 chave: this.props.chave,
                 nome: this.props.dados.name,
+                habilidades: this.props.dados.abilities,
+                experienciaBase: this.props.dados.base_experience,
+                indicesDeJogos: this.props.dados.game_indices,
+                altura: this.props.dados.height,
+                peso: this.props.dados.weight,
             })
             setTimeout(() => {
                 console.log(this.props.dados)
-                console.log(this.state.chave)
-                console.log(this.state.nome)
+                //console.log(this.state.chave)
+                //console.log(this.state.nome)
+                ///console.log(this.state.habilidades)
+                //console.log(this.state.indicesDeJogos)
+                console.log(this.state.altura)
+                console.log(this.state.peso)
             })
         }
     }
     render() {
         return (
             <section className="telaDeInfoDoPokemon">
-                <h2></h2> <div className="imgPokemon"><img src="" alt="" /></div>
+                <h2>{ this.state.nome }</h2>
                 <h3>habilidades:</h3>
-                <p>nome de cada habilidade n linhas</p>
+                {
+                    this.state.habilidades.map((item, index) => {
+                        return(
+                            <li key={index}>{ item.ability.name }</li>
+                        )
+                    })
+                }
                 <h3>Experiência base:</h3>
-                <p>numero</p>
-
+                <p>{ this.state.experienciaBase }</p>
+                <details>
+                    <summary>índices de jogos</summary>
+                    {
+                        this.state.indicesDeJogos.map((item, index) => {
+                            return(
+                                <li key={index}>
+                                    <p>Índice do jogo: { item.game_index }</p>
+                                    <p>Versão: { item.version.name }</p>
+                                </li>
+                            )
+                        })
+                    }
+                </details>
 
             </section>
         )
