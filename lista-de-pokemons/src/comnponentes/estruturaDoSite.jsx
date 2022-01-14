@@ -1,5 +1,5 @@
 import Cabeçalho from "./cabeçalho"
-import Lista from "./listaDosPokemons"
+//import Lista from "./listaDosPokemons"
 
 export default function Estrutura(props) {
     return (
