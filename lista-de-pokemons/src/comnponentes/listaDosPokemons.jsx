@@ -27,10 +27,10 @@ export default class Lista extends Component {
             this.setState({ infoPokemons: dados })
         })
 
-    }*/
+    }
     atualizar(chave) {
         this.setState({ chave: chave, switchPokemon: this.state.infoPokemons[chave] })
-    }
+    }*/
     render() {
         return (
             <div>
