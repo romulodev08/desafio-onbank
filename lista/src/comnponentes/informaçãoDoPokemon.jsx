@@ -79,6 +79,10 @@ export default class PokemonInfo extends Component {
     render() {
         return (
             <section className="telaDeInfoDoPokemon">
+                {
+                    this.state.id != null? 
+                    <div>
+                        
                 <h2>{this.state.nome}</h2>
                 <h3>Id:</h3>
                 <p> {this.props.dados.id} </p>
@@ -186,6 +190,10 @@ export default class PokemonInfo extends Component {
                     </div> : ""}
                     
                 </details>
+                    </div> 
+                    :
+                     ""
+                }
             </section>
         )
     }
