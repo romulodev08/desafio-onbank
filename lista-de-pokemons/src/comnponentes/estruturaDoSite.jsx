@@ -5,7 +5,7 @@ export default function Estrutura(props) {
     return (
         <div>
             <Cabeçalho />
-            <Lista />
+            
         </div>
     )
 }
