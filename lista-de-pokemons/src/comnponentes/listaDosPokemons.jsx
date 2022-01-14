@@ -6,10 +6,10 @@ export default class Lista extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            response: [],
+            response: [0],
             chave: null,
-            infoPokemons: [],
-            switchPokemon: []
+            infoPokemons: [0],
+            switchPokemon: [0]
         }
     }/*
     componentDidMount() {
