@@ -41,6 +41,7 @@ export default class Lista extends Component {
                     //this.state.response.map((item, index) =>
                     //    <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
                 }
+                olá mundo
             </div >
         )
     }
