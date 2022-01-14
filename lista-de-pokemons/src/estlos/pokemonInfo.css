@@ -2,10 +2,84 @@
     margin: 0;
     padding: 0;
 }
+
+
 .telaDeInfoDoPokemon {
     width: 100%;
-    max-height: 400px;
+    height: 100%;
     overflow-y: scroll;
-    padding: 15px;
     border-bottom: solid 1px black;
+    box-sizing: border-box;
+    background-color: #feca1b;
+}
+.containerNomeFoto {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 71px;
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    box-shadow: inset 2px 3px 20px 4px black;
+    background-color: #3761a8;
+    color: white;
+    text-shadow: 1px 1px 10px black;
+}
+.containerNomeFoto > h2 {
+    height: fit-content;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.containerNomeFoto .fotoPrincipal {
+    height: 50px;
+    margin: auto;
+}
+.containerNomeFoto .fotoPrincipal img {
+    height: 100%;
+}
+.item {
+    border-bottom: solid 1px black;
+    background-color: #3760a8c7;
+    padding: 10px;
+}
+.telaDeInfoDoPokemon > div > section {
+    margin-top: 71px;
+    padding: 10px;
+    background-color: #3761a8;
+    color: #feca1b;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+.telaDeInfoDoPokemon > div > section details > summary {
+    font: normal 20px Arial;
+}
+.telaDeInfoDoPokemon > div > section li {
+    font: normal 18px Arial;
+    list-style-type: none;
+}
+.telaDeInfoDoPokemon h3 {
+    font: normal 20px Arial;
+}
+
+
+
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+@media(min-width: 660px) {
+    .containerNomeFoto {
+        left: 0;
+        right: calc(50% + 19px);
+    }
+    .containerNomeFoto .fotoPrincipal {
+        height: 100px;
+        margin: auto;
+    }
+    .telaDeInfoDoPokemon > div > section {
+        margin-top: 121px;
+    }
 }

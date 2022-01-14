@@ -80,119 +80,133 @@ export default class PokemonInfo extends Component {
         return (
             <section className="telaDeInfoDoPokemon">
                 {
-                    this.state.id != null? 
-                    <div>
-                        
-                <h2>{this.state.nome}</h2>
-                <h3>Id:</h3>
-                <p> {this.props.dados.id} </p>
-                <h3>habilidades:</h3>
-                {
-                    this.state.habilidades.map((item, index) => {
-                        return (
-                            <li key={index}>{item.ability.name}</li>
-                        )
-                    })
-                }
-                <h3>Experiência base:</h3>
-                <p>{this.state.experienciaBase}</p>
-                <details>
-                    <summary>índices de jogos</summary>
-                    {
-                        this.state.indicesDeJogos.map((item, index) => {
-                            return (
-                                <li key={index}>
-                                    <p>Índice do jogo: {item.game_index}</p>
-                                    <p>Versão: {item.version.name}</p>
-                                </li>
-                            )
-                        })
-                    }
-                </details>
-                <h3>Ítens retidos:</h3>
-                {
-                    this.state.itensRetidos.map((item, index) => {
-                        return (
-                            <p key={index}>{item.item.name}</p>
-                        )
-                    })
-                }
-                <h3>É padrão?:</h3>
-                <p>{this.state.padrão ? "sim" : "não"}</p>
-                <h3>Pedido:</h3>
-                <p>{this.state.pedido}</p>
-                <details>
-                    <summary><h3>Movimentos:</h3></summary>
-                    {
-                        this.state.movimentos.map((item, index) => {
-                            return (
-                                <p key={index}>movimento {index + 1}: {item.move.name}</p>
-                            )
-                        })
-                    }
-                </details>
-                <h3>Espécie:</h3>
-                <p>{this.state.espécie.name}</p>
-                <h3>Tipo:</h3>
-                <p>{this.state.tipo.toString()}</p>
-                <details>
-                    <summary>
-                        <h3>Estatísticas:</h3>
-                    </summary>
-                    {
-                        this.state.estatisticas.map((item, index) => {
-                            return (
-                                <p key={index}>
-                                    <span>{index + 1}</span>
-                                    <li>Estatística base: {item.base_stat.toString()}</li>
-                                    <li>Dificuldade: {item.effort.toString()}</li>
-                                    <li>Estado: {item.stat.name.toString()}</li>
-                                </p>
-                            )
-                        })
-                    }
-                </details>
-                <details>
-                    <summary>
-                        <h3>Duendes:</h3>
-                    </summary>
+                    this.state.id != null ?
+                        <div>
 
-                    {this.state.duendes.front_default != null && this.state.duendes.back_default != null ? <div>
-                        <p>Padrão:</p>
-                        <div>
-                            <img src={this.state.duendes.front_default} alt="" />
-                            <img src={this.state.duendes.back_default} alt="" />
+                            <div className="containerNomeFoto item">
+                                <h2>{this.state.nome}</h2>
+                                <div className="fotoPrincipal">
+                                    <img src={this.state.duendes.front_default} alt="foto do pokémon" />
+                                </div>
+                            </div>
+                            <section>
+                                <div className="IDContainer flex item">
+                                    <h3>Id:</h3>
+                                    <p> {this.props.dados.id} </p>
+                                </div>
+                                <div className="habilidadesContainer item">
+                                    <h3>habilidades:</h3>
+                                    {
+                                        this.state.habilidades.map((item, index) => {
+                                            return (
+                                                <li key={index}>{item.ability.name}</li>
+                                            )
+                                        })
+                                    }
+                                </div>
+                                <div className="experienciaContainer flex item">
+                                    <h3>Experiência base:</h3>
+                                    <p>{this.state.experienciaBase}</p>
+                                </div>
+                                <details className="indicesContainer item">
+                                    <summary>índices de jogos</summary>
+                                    {
+                                        this.state.indicesDeJogos.map((item, index) => {
+                                            return (
+                                                <li key={index}>
+                                                    <p>Índice do jogo: {item.game_index}</p>
+                                                    <p>Versão: {item.version.name}</p>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </details>
+                                <div className="ItensContidosContainer item">
+                                    <h3>Ítens retidos:</h3>
+                                    {
+                                        this.state.itensRetidos.map((item, index) => {
+                                            return (
+                                                <p key={index}>{item.item.name}</p>
+                                            )
+                                        })
+                                    }
+                                </div>
+                                <div className="padraoContainer flex item">
+                                    <h3>É padrão?:</h3>
+                                    <p>{this.state.padrão ? "sim" : "não"}</p>
+                                </div>
+                                <div className="pedido flex item">
+                                    <h3>Pedido:</h3>
+                                    <p>{this.state.pedido}</p>
+                                </div>
+                                <details className="movimentos item">
+                                    <summary>Movimentos:</summary>
+                                    {
+                                        this.state.movimentos.map((item, index) => {
+                                            return (
+                                                <p key={index}>movimento {index + 1}: {item.move.name}</p>
+                                            )
+                                        })
+                                    }
+                                </details>
+                                <div className="especie flex item">
+                                    <h3>Espécie:</h3>
+                                    <p>{this.state.espécie.name}</p>
+                                </div>
+                                <div className="tipo item">
+                                    <h3>Tipo:</h3>
+                                    <p>{this.state.tipo.toString()}</p>
+                                </div>
+                                <details className="estatisticas item">
+                                    <summary>Estatísticas:</summary>
+                                    {
+                                        this.state.estatisticas.map((item, index) => {
+                                            return (
+                                                <p key={index}>
+                                                    <span>{index + 1}</span>
+                                                    <li>Estatística base: {item.base_stat.toString()}</li>
+                                                    <li>Dificuldade: {item.effort.toString()}</li>
+                                                    <li>Estado: {item.stat.name.toString()}</li>
+                                                </p>
+                                            )
+                                        })
+                                    }
+                                </details>
+                                <details className="formas item">
+                                    <summary>Formas:</summary>
+                                    {this.state.duendes.front_default != null && this.state.duendes.back_default != null ? <div>
+                                        <p>Padrão:</p>
+                                        <div>
+                                            <img src={this.state.duendes.front_default} alt="" />
+                                            <img src={this.state.duendes.back_default} alt="" />
+                                        </div>
+                                    </div> : ""}
+                                    {this.state.duendes.front_female != null && this.state.duendes.back_female != null ? <div>
+                                        <p>Fêmea:</p>
+                                        <div>
+                                            <img src={this.state.duendes.front_female} alt="" />
+                                            <img src={this.state.duendes.back_female} alt="" />
+                                        </div>
+                                    </div> : ""}
+                                    {this.state.duendes.front_shiny != null && this.state.duendes.back_shiny != null ? <div>
+                                        <p>Brilhante:</p>
+                                        <div>
+                                            <img src={this.state.duendes.front_shiny} alt="" />
+                                            <img src={this.state.duendes.back_shiny} alt="" />
+                                        </div>
+                                    </div> : ""}
+                                    {this.state.duendes.front_shiny_female != null && this.state.duendes.back_shiny_female != null ? <div>
+                                        <p>Fêmea brilhante:</p>
+                                        <div>
+                                            <img src={this.state.duendes.front_shiny_female} alt="" />
+                                            <img src={this.state.duendes.back_shiny_female} alt="" />
+                                        </div>
+                                    </div> : ""}
+                                </details>
+                            </section>
                         </div>
-                    </div> : ""}
-                    
-                    {this.state.duendes.front_female != null && this.state.duendes.back_female != null ? <div>
-                        <p>Fêmea:</p>
-                        <div>
-                            <img src={this.state.duendes.front_female} alt="" />
-                            <img src={this.state.duendes.back_female} alt="" />
-                        </div>
-                    </div> : ""}
-
-                    {this.state.duendes.front_shiny != null && this.state.duendes.back_shiny != null ? <div>
-                        <p>Brilhante:</p>
-                        <div>
-                            <img src={this.state.duendes.front_shiny} alt="" />
-                            <img src={this.state.duendes.back_shiny} alt="" />
-                        </div>
-                    </div> : ""}
-                    
-                    {this.state.duendes.front_shiny_female != null && this.state.duendes.back_shiny_female != null ? <div>
-                        <p>Fêmea brilhante:</p>
-                        <div>
-                            <img src={this.state.duendes.front_shiny_female} alt="" />
-                            <img src={this.state.duendes.back_shiny_female} alt="" />
-                        </div>
-                    </div> : ""}
-                    
-                </details>
-                    </div> 
-                    :
-                     ""
+                        :
+                        ""
                 }
             </section>
         )

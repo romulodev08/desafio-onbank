@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#listaContainer {
+    position: absolute;
+    top: 71px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: hidden;
+    display: grid;
+}
+
+.listaDosPokemons {
+    height: 100%;
+    overflow-y: scroll;
+
+}
+
+.pokemonItem {
+    width: 100%;
+    font: bold 20px Arial, sans-serif;
+    padding: 10px;
+    text-shadow: 1px 1px 10px black;
+    border-bottom: solid 1px black;
+    background-color: #3761a8;
+    color: #feca1b;
+}
+
+@media(min-width: 660px) {
+    #listaContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

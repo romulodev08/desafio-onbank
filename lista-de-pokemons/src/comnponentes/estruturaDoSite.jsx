@@ -3,7 +3,7 @@ import Lista from "./listaDosPokemons"
 
 export default function Estrutura(props) {
     return (
-        <div>
+        <div id="estrutura-do-site">
             <Cabeçalho />
             <Lista />
         </div>

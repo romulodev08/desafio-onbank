@@ -1,7 +1,8 @@
 
 import axios from "axios"
 import { Component } from "react";
-//import PokemonInfo from "./informaçãoDoPokemon";
+import PokemonInfo from "./informaçãoDoPokemon";
+import "../estlos/listaDosPokemons.css"
 
 
 export default class Lista extends Component {
@@ -37,15 +38,27 @@ export default class Lista extends Component {
 
     render() {
         return (
-            <section>
-
+            <section id="listaContainer">
                 {
-                    this.state.response != [] ?
-                        this.state.response.map((item, index) =>
-                            <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
+                    this.state.chave != null ?
+                        <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} />
                         :
-                        "sem resposta"
+                        <div id="asInfoAparecerãoAqui">
+                            <h2>Selecione um Pokémon</h2>
+                        </div>
                 }
+                <div className="listaDosPokemons">
+                    {
+                        this.state.response != [] ?
+                            this.state.response.map((item, index) =>
+                                <div className="pokemonItem" key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
+                            :
+                            "sem informações"
+                    }
+                </div>
+                
+                
+
             </section>
         )
     }
