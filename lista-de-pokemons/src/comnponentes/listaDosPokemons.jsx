@@ -35,14 +35,11 @@ export default class Lista extends Component {
         return (
             <div>
                 {
-                    //this.state.chave != null ? <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} /> : ""
+                    this.state.chave != null ? <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} /> : ""
                 }
                 {
-                    this.state.response != [] ?
-                        this.state.response.map((item, index) =>
-                            <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
-                        : 
-                        "vazio"
+                    this.state.response.map((item, index) =>
+                        <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
                 }
             </div >
         )
