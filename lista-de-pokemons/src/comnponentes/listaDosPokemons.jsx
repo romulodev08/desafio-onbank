@@ -16,7 +16,6 @@ export default class Lista extends Component {
         axios.get("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20").then(resposta => {
             const dados = resposta.data.results
             this.setState({ response: dados })
-            //console.log(this.state.response)
         })
         setTimeout(() => {
             let dados = []
@@ -26,7 +25,6 @@ export default class Lista extends Component {
                 })
             })
             this.setState({ infoPokemons: dados })
-            //console.log(this.state.infoPokemons)
         })
 
     }
@@ -40,8 +38,11 @@ export default class Lista extends Component {
                     //this.state.chave != null ? <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} /> : ""
                 }
                 {
-                    this.state.response.map((item, index) =>
-                        <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
+                    this.state.response != [] ?
+                        this.state.response.map((item, index) =>
+                            <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
+                        : 
+                        "vazio"
                 }
             </div >
         )
