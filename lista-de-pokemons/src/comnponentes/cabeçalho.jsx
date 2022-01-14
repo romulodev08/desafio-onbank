@@ -1,4 +1,4 @@
-//import "../estlos/cabeçalho.css"
+import "../estlos/cabeçalho.css"
 
 export default function Cabeçalho(props) {
     return(

@@ -5,7 +5,7 @@ import Teste1 from "./testes/teste1.jsx"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Estrutura />
+    olá mundo!!!
   </React.StrictMode>,
   document.getElementById('root')
 );
