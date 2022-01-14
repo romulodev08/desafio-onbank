@@ -1,6 +1,6 @@
 import { Component } from "react/cjs/react.development";
-import axios from "axios"
-import PokemonInfo from "./informaçãoDoPokemon";
+//import axios from "axios"
+//import PokemonInfo from "./informaçãoDoPokemon";
 
 export default class Lista extends Component {
     constructor(props) {
@@ -35,7 +35,7 @@ export default class Lista extends Component {
         return (
             <div>
                 {
-                    this.state.chave != null ? <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} /> : ""
+                    //this.state.chave != null ? <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} /> : ""
                 }
                 {
                     //this.state.response.map((item, index) =>
