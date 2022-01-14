@@ -3,7 +3,9 @@ import axios from "axios"
 import { Component } from "react";
 import PokemonInfo from "./informaçãoDoPokemon";
 
+
 export default class Lista extends Component {
+    /*
     constructor(props) {
         super(props)
         this.state = {
@@ -32,17 +34,13 @@ export default class Lista extends Component {
     atualizar(chave) {
         this.setState({ chave: chave, switchPokemon: this.state.infoPokemons[chave] })
     }
+    */
     render() {
-        return (
-            <div>
-                {
-                    this.state.chave != null ? <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} /> : ""
-                }
-                {
-                    this.state.response.map((item, index) =>
-                        <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
-                }
-            </div >
+        return(
+            <section>
+                olá mundo rosoudbfvisdbfci
+            </section>
         )
     }
 }
+
