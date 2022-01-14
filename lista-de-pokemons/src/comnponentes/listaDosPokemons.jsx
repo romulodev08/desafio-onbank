@@ -34,13 +34,7 @@ export default class Lista extends Component {
     render() {
         return (
             <div>
-                {
-                    //this.state.chave != null ? <PokemonInfo chave={this.state.chave} dados={this.state.switchPokemon} /> : ""
-                }
-                {
-                    //this.state.response.map((item, index) =>
-                    //    <div key={index} onClick={() => this.atualizar(index)} >{item.name}</div>)
-                }
+                
                 olá mundo
             </div >
         )
