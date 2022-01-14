@@ -1,7 +1,7 @@
 
-import axios from "axios"
+//import axios from "axios"
 import { Component } from "react";
-import PokemonInfo from "./informaçãoDoPokemon";
+//import PokemonInfo from "./informaçãoDoPokemon";
 
 
 export default class Lista extends Component {
